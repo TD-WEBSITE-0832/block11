@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DEV. - Dark Menu</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+ <div class="header">
+    <div class="logo">DEV.</div>
+
+    <!-- Desktop uchun horizontal menyusi -->
+    <nav class="desktop-nav">
+      <a onclick="showMedia('home')">Home</a>
+      <a onclick="showMedia('about')">About</a>
+      <a onclick="showMedia('service')">Service</a>
+    </nav>
+
+    <!-- Mobile uchun hamburger -->
+    <button class="hamburger" onclick="toggleMenu()">≡</button>
+  </div>
+
+  <!-- Sidebar — faqat mobilda -->
+  <div class="sidebar" id="sidebar">
+    <button class="close-btn" onclick="toggleMenu()">×</button>
+    <a onclick="showMedia('home')">Home</a>
+    <a onclick="showMedia('about')">About</a>
+    <a onclick="showMedia('service')">Service</a>
+  </div>
+
+  <div class="content">
+    <h2 style="color:#00d4ff;">Media Kontent</h2>
+    <div id="media-display">
+      <div class="placeholder">Bo‘lim tanlang — rasm yoki video chiqadi!</div>
+    </div>
+  </div>
+
+  <script src="script.js">
+   
+  </script>
+
+</body>
+</html>

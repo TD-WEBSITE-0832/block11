@@ -1,0 +1,126 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: Arial, sans-serif;
+      background: #0a0a0a;
+      color: #e0e0e0;
+      min-height: 100vh;
+    }
+
+    /* Header */
+    .header {
+      position: fixed;
+      top: 0; left: 0; width: 100%;
+      padding: 15px 30px;
+      background: #111;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      border-bottom: 1px solid #222;
+    }
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      color: #00d4ff;
+    }
+
+    /* Desktop nav (horizontal) */
+    .desktop-nav {
+      display: flex;
+      gap: 40px;
+    }
+    .desktop-nav a {
+      color: #ccc;
+      text-decoration: none;
+      font-size: 18px;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+    .desktop-nav a:hover {
+      color: #00d4ff;
+    }
+
+    /* Hamburger (mobilda ko‘rinadi) */
+    .hamburger {
+      font-size: 34px;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+      display: none; /* defaultda yashirin */
+    }
+    .hamburger:hover { color: #00d4ff; }
+
+    /* Sidebar (faqat mobilda) */
+    .sidebar {
+      position: fixed;
+      top: 0; right: -300px;
+      width: 300px; height: 100%;
+      background: #111;
+      border-left: 1px solid #222;
+      transition: right 0.4s ease;
+      z-index: 999;
+      padding-top: 70px;
+      text-align: center;
+    }
+    .sidebar.active { right: 0; }
+
+    .close-btn {
+      position: absolute;
+      top: 15px; right: 20px;
+      font-size: 40px;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+    .close-btn:hover { color: #ff4d4d; }
+
+    .sidebar a {
+      display: block;
+      color: #ccc;
+      text-decoration: none;
+      font-size: 22px;
+      padding: 20px;
+      cursor: pointer;
+    }
+    .sidebar a:hover {
+      background: #1a1a1a;
+      color: #00d4ff;
+    }
+
+    /* Media kontent */
+    .content {
+      margin-top: 90px;
+      padding: 20px;
+      text-align: center;
+    }
+    #media-display {
+      margin: 30px auto;
+      max-width: 900px;
+      min-height: 400px;
+      background: rgba(20,20,20,0.7);
+      border-radius: 12px;
+      padding: 20px;
+      border: 1px solid #333;
+    }
+    img, video {
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.7);
+    }
+    .placeholder {
+      color: #888;
+      font-size: 20px;
+      padding: 120px 0;
+    }
+
+    /* Responsive — media queries */
+    @media (max-width: 768px) {
+      .desktop-nav { display: none; }          /* PC nav yashirin */
+      .hamburger { display: block; }           /* Hamburger chiqadi */
+    }
+
+    @media (min-width: 769px) {
+      .sidebar { display: none; }              /* Sidebar PCda kerak emas */
+    }
