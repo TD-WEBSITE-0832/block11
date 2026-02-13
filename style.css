@@ -1,4 +1,4 @@
-* { margin:0; padding:0; box-sizing:border-box; }
+/* * { margin:0; padding:0; box-sizing:border-box; }
     body {
       font-family: Arial, sans-serif;
       background: #0a0a0a;
@@ -6,7 +6,6 @@
       min-height: 100vh;
     }
 
-    /* Header */
     .header {
       position: fixed;
       top: 0; left: 0; width: 100%;
@@ -24,7 +23,6 @@
       color: #00d4ff;
     }
 
-    /* Desktop nav (horizontal) */
     .desktop-nav {
       display: flex;
       gap: 40px;
@@ -40,18 +38,18 @@
       color: #00d4ff;
     }
 
-    /* Hamburger (mobilda ko‘rinadi) */
+   
     .hamburger {
       font-size: 34px;
       background: none;
       border: none;
       color: white;
       cursor: pointer;
-      display: none; /* defaultda yashirin */
+      display: none; 
     }
     .hamburger:hover { color: #00d4ff; }
 
-    /* Sidebar (faqat mobilda) */
+   
     .sidebar {
       position: fixed;
       top: 0; right: -300px;
@@ -89,7 +87,6 @@
       color: #00d4ff;
     }
 
-    /* Media kontent */
     .content {
       margin-top: 90px;
       padding: 20px;
@@ -115,12 +112,87 @@
       padding: 120px 0;
     }
 
-    /* Responsive — media queries */
     @media (max-width: 768px) {
-      .desktop-nav { display: none; }          /* PC nav yashirin */
-      .hamburger { display: block; }           /* Hamburger chiqadi */
+      .desktop-nav { display: none; }        
+      .hamburger { display: block; }           
     }
 
     @media (min-width: 769px) {
-      .sidebar { display: none; }              /* Sidebar PCda kerak emas */
+      .sidebar { display: none; }             
+    }  */
+
+
+
+
+
+
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      min-height: 100vh;
+      background: #0f0f17;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .calculator {
+      width: 320px;
+      background: #1a1a2e;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+      padding: 20px 15px;
+    }
+    .display {
+      height: 120px;
+      background: #0f0f17;
+      border-radius: 16px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      padding: 0 20px;
+      color: white;
+      font-size: 3.2rem;
+      font-weight: 300;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+    button {
+      height: 68px;
+      font-size: 1.6rem;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: all 0.15s;
+      color: white;
+      background: #2d2d44;
+    }
+    button:hover {
+      filter: brightness(1.25);
+    }
+    button:active {
+      transform: scale(0.94);
+    }
+
+    .operator { background: #ff9500; font-size: 2rem; }
+    .equal { background: #ff9500; grid-column: span 2; border-radius: 34px; }
+    .clear { background: #ff3b30; }
+    .del   { background: #ff9500; }
+    .zero  { grid-column: span 2; border-radius: 34px; }
+    .dot   { font-size: 2.8rem; line-height: 0.6; }
+
+    .percent, .divide, .multiply, .minus, .plus {
+      background: #505066;
+      color: #ff9500;
     }

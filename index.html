@@ -8,22 +8,21 @@
 
 </head>
 <body>
-
+<!-- 
  <div class="header">
     <div class="logo">DEV.</div>
 
-    <!-- Desktop uchun horizontal menyusi -->
+    
     <nav class="desktop-nav">
       <a onclick="showMedia('home')">Home</a>
       <a onclick="showMedia('about')">About</a>
       <a onclick="showMedia('service')">Service</a>
     </nav>
 
-    <!-- Mobile uchun hamburger -->
     <button class="hamburger" onclick="toggleMenu()">≡</button>
   </div>
 
-  <!-- Sidebar — faqat mobilda -->
+ 
   <div class="sidebar" id="sidebar">
     <button class="close-btn" onclick="toggleMenu()">×</button>
     <a onclick="showMedia('home')">Home</a>
@@ -36,8 +35,43 @@
     <div id="media-display">
       <div class="placeholder">Bo‘lim tanlang — yoki rasm mi video chiqadi</div>
     </div>
-  </div>
+  </div> -->
 
+
+
+
+
+
+  <div class="calculator">
+    <div class="display" id="screen">0</div>
+
+    <div class="buttons">
+      <button class="clear" onclick="clearAll()">AC</button>
+      <button class="del"   onclick="deleteLast()">DEL</button>
+      <button class="percent operator" onclick="addToScreen('%')">%</button>
+      <button class="divide operator"   onclick="addToScreen('/')">/</button>
+
+      <button onclick="addToScreen('7')">7</button>
+      <button onclick="addToScreen('8')">8</button>
+      <button onclick="addToScreen('9')">9</button>
+      <button class="multiply operator" onclick="addToScreen('*')">×</button>
+
+      <button onclick="addToScreen('4')">4</button>
+      <button onclick="addToScreen('5')">5</button>
+      <button onclick="addToScreen('6')">6</button>
+      <button class="minus operator"    onclick="addToScreen('-')">-</button>
+
+      <button onclick="addToScreen('1')">1</button>
+      <button onclick="addToScreen('2')">2</button>
+      <button onclick="addToScreen('3')">3</button>
+      <button class="plus operator"     onclick="addToScreen('+')">+</button>
+
+      <button class="zero" onclick="addToScreen('00')">00</button>
+      <button onclick="addToScreen('0')">0</button>
+      <button class="dot" onclick="addToScreen('.')">.</button>
+      <button class="equal" onclick="calculate()">=</button>
+    </div>
+  </div>
   <script src="script.js">
    
   </script>
