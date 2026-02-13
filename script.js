@@ -88,14 +88,11 @@ const screen = document.getElementById('screen');
 
     function calculate() {
       try {
-        // xavfsizroq eval o‘rniga oddiy ifodalarni qayta ishlash
-        // lekin oddiy kalkulyator uchun eval ishlatamiz (real loyihada yaxshiroq parser kerak)
         let result = eval(currentInput
           .replace('×', '*')
           .replace('%', '/100')
         );
 
-        // cheksiz yoki NaN bo‘lsa
         if (!isFinite(result)) {
           currentInput = 'Xato';
         } else {
@@ -107,7 +104,6 @@ const screen = document.getElementById('screen');
       updateScreen();
     }
 
-    // Klaviatura bilan ham ishlasin (ixtiyoriy)
     document.addEventListener('keydown', e => {
       if (e.key >= '0' && e.key <= '9') addToScreen(e.key);
       if (e.key === '.') addToScreen('.');
@@ -115,4 +111,18 @@ const screen = document.getElementById('screen');
       if (e.key === 'Enter' || e.key === '=') calculate();
       if (e.key === 'Backspace') deleteLast();
       if (e.key === 'Escape' || e.key === 'c' || e.key === 'C') clearAll();
+    });
+
+
+
+
+
+let bt=document.querySelector('.bt')
+bt.style.boxShadow='0 0 10px red'
+
+
+
+
+document.querySelector('.bt').addEventListener('click', function() {
+    window.location.href = 'Mers.html';
     });
