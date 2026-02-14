@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Neon Ribbon Progress Bar</title>
+  <link rel="stylesheet" href="Bmw.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1 id="lo">Neon Ribbon Progress</h1>
+    <p>0% dan 100% gacha silliq harakatlanadi</p>
+
+    <div class="progress-wrapper">
+      <div class="progress-bar" id="progressBar">
+        <div class="ribbon" id="ribbon"></div>
+        <span class="percentage" id="percentage">0%</span>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button onclick="setProgress(0)">0%</button>
+      <button onclick="setProgress(25)">25%</button>
+      <button onclick="setProgress(48)">48%</button>
+      <button onclick="setProgress(75)">75%</button>
+      <button onclick="setProgress(100)">100%</button>
+      <button onclick="animateTo(100)">Avto 100% ga yetkazish</button>
+    </div>
+  </div>
+
+  <script src="Bmw.js"></script>
+</body>
+</html>

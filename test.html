@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>3D Curling Ribbon Progress</title>
+  <link rel="stylesheet" href="test.css">
+</head>
+<body>
+
+  <div class="progress-scene">
+    <div class="slot">
+      <div class="ribbon" id="ribbon">
+        <div class="curl-highlight"></div>
+        <div class="glow-core"></div>
+      </div>
+    </div>
+    <div class="percent" id="percent">48%</div>
+  </div>
+
+  <script>
+    // Agar dinamik o'zgartirish kerak bo'lsa (masalan 0→100)
+    function setPercent(val) {
+      document.getElementById('ribbon').style.setProperty('--progress', val + '%');
+      document.getElementById('percent').textContent = val + '%';
+    }
+
+    // Misol: avto 0 dan 100 gacha (demo uchun kommentdan chiqarib ko'r)
+    // let p = 0;
+    // const int = setInterval(() => {
+    //   p += 2;
+    //   setPercent(p);
+    //   if (p >= 100) clearInterval(int);
+    // }, 80);
+  </script>
+
+</body>
+</html>

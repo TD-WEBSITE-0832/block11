@@ -43,3 +43,9 @@ window.addEventListener('load', () => {
     document.querySelector('.glitch').style.animation = 'glitch 4s infinite';
   }, 800);
 });
+
+
+
+let lc=document.getElementById('loc')
+lc.window.location.href='Bmw.html'
+lc.style.cursor='pointer'
